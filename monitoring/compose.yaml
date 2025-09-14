@@ -18,11 +18,11 @@ services:
             memory: 1G
           reservations:
             memory: 512M
-      networks:
-        - monitoring
-        - blog_blog-app-net
-      healthcheck:
-        test:
+    networks:
+      - monitoring
+      - blog_blog-app-net
+    healthcheck:
+      test:
           [
             'CMD',
             'wget',
