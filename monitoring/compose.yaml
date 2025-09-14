@@ -61,7 +61,7 @@ services:
     grafana:
         image: grafana/grafana:10.1.0
         ports:
-            - '3000:3000'
+            - '3001:3000'
         volumes:
             - grafana-storage:/var/lib/grafana
         environment:
@@ -82,7 +82,7 @@ services:
             - monitoring
             - bloggy_blog-app-net
         healthcheck:
-            test: ['CMD-SHELL', 'curl -f http://localhost:9090/api/health || exit 1']
+            test: ['CMD-SHELL', 'curl -f http://localhost:3000/api/health || exit 1']
             interval: 30s
             timeout: 10s
             retries: 3
