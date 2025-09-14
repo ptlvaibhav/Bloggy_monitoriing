@@ -20,7 +20,7 @@ services:
                     memory: 512M
         networks:
             - monitoring
-            - bloggy_blog-app-net
+            - blog_blog-app-net
         healthcheck:
             test:
                 [
@@ -80,7 +80,7 @@ services:
                     memory: 256M
         networks:
             - monitoring
-            - bloggy_blog-app-net
+            - blog_blog-app-net
         healthcheck:
             test: ['CMD-SHELL', 'curl -f http://localhost:3000/api/health || exit 1']
             interval: 30s
@@ -97,7 +97,7 @@ networks:
     monitoring:
         driver: overlay
         attachable: true
-    bloggy_blog-app-net:
+    blog_blog-app-net:
         external: true
 
 secrets:
