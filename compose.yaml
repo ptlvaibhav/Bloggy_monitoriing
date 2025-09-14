@@ -34,7 +34,7 @@ services:
     secrets:
       - db_password
   blog-server:
-    image: ptlvaibhav/blog-demo-app:build-ef4ec4e22ccc6c85e0159018a95c0e03ff4a1e0d
+    image: ptlvaibhav/blog-demo-app:build-d6f903649776c6ce76823919190888ff68d67849
     deploy:
       replicas: 1
       update_config:
