@@ -7,7 +7,7 @@ scrape_configs:
       metrics_path: /metrics
       static_configs:
           - targets:
-                - '13.233.225.100:9323'
+                - '43.205.254.92:9323'
     - job_name: 'cadvisor'
       dns_sd_configs:
           - names: ['tasks.cadvisor']
