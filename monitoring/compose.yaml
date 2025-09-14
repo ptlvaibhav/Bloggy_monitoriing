@@ -11,7 +11,7 @@ services:
     deploy:
       replicas: 1
       placement:
-        constrains:
+        constraints:
           -node.role == manager
         resources:
           limits:
@@ -99,4 +99,3 @@ networks:
 secrets:
   grafana_password:
     external: true
-    # 
